@@ -2,7 +2,7 @@ import requests
 import json
 
 
-def send_slack_message(webhook_url, message, username="QA 자동화 테스트 알림 Bot", icon_emoji=":robot_face"):
+def send_slack_message(webhook_url, message, username, icon_emoji=":robot_face"):
     headers = {
         'Content-Type': 'application/json'
     }
