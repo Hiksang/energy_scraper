@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y curl gcc && \
     curl -sSL https://install.python-poetry.org | python3 - && \
     apt-get clean
 
+RUN apt-get update && apt-get install -y iputils-ping
+
+
 # poetry가 설치되는 경로를 PATH에 추가
 ENV PATH="/root/.local/bin:$PATH"
 

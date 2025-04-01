@@ -1,12 +1,9 @@
 from pymongo import MongoClient
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-DB_NAME = os.getenv("MONGO_DB", "energyData")
-COLLECTION_NAME = os.getenv("MONGO_COLLECTION", "naverReport")
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017")
+DB_NAME = os.environ.get("MONGO_DB", "energyData")
+COLLECTION_NAME = os.environ.get("MONGO_COLLECTION", "naverReport")
 
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
